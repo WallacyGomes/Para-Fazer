@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="css/style.css">
     <title>Para-Fazer</title>
 </head>
+
 <body>
     <main class="to-do-container">
-        <h1>Para-Fazer <img src="imgs/parafazer-logo.svg" alt="logo check" style="width: 40px; height: 40px;"></h1>
+        <h1>Para-Fazer</h1>
         <div class="to-do">
             <div class="to-do-header">
-                <input type="text" placeholder="O que você precisa fazer?" class="to-do-input">
+                <input type="text" placeholder="O que você precisa fazer?" class="to-do-input" maxlength="32ch">
                 <button type="submit" class="to-do-submit" onclick="createTask()">Enviar</button>
             </div>
             <ul class="to-do-list">
@@ -22,4 +24,5 @@
         <script src="js/script.js"></script>
     </main>
 </body>
+
 </html>

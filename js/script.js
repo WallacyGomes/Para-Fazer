@@ -4,7 +4,9 @@ const taskList = document.querySelector('.to-do-list')
 
 function createTask(){
     const inputTexto = input.value;
-    if (inputTexto.length){
+    if (inputTexto === ' ' || inputTexto === ''){
+        alert('Digite sua tarefa antes de clicar no botão!');
+    } else {
         //Cria a "li"
         let list = document.createElement('li');
         taskList.appendChild(list);
@@ -14,8 +16,6 @@ function createTask(){
         const excluir = document.createElement('button');
         excluir.classList.add('excluir');
         list.appendChild(excluir);
-    } else {
-        alert('Digite sua tarefa antes de clicar no botão!');
     }
     // Limpa o campo de input
     input.value = '';
@@ -26,9 +26,10 @@ function createTask(){
 taskList.addEventListener('click', (e) => {
     if (e.target.tagName === 'LI') {
         e.target.classList.toggle('check');
+        e.target.lastChild.classList.toggle('check')
         saveContent();
     } else if (e.target.tagName === 'BUTTON') {
-        setInterval(() => {e.target.parentElement.remove(); saveContent();}, 200);
+        setInterval(() => {e.target.parentElement.remove(); saveContent();}, 60);
     } else{false;}
 })
 
