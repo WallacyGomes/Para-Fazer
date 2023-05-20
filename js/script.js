@@ -1,5 +1,4 @@
 const input = document.querySelector('.to-do-input');
-
 const taskList = document.querySelector('.to-do-list')
 
 function createTask(){
@@ -31,7 +30,7 @@ taskList.addEventListener('click', (e) => {
     } else if (e.target.tagName === 'BUTTON') {
         setInterval(() => {e.target.parentElement.remove(); saveContent();}, 60);
     } else{false;}
-})
+}) 
 
 function saveContent() {
     localStorage.setItem('content', taskList.innerHTML);
