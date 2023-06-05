@@ -3,7 +3,7 @@ const taskList = document.querySelector('.to-do-list')
 
 function createTask(){
     const inputTexto = input.value;
-    if (inputTexto === ' ' || inputTexto === ''){
+    if (inputTexto.includes(' ') || inputTexto === ''){
         alert('Digite sua tarefa antes de clicar no botão!');
     } else {
         //Cria a "li"
